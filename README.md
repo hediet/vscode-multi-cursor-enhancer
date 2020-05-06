@@ -1,5 +1,7 @@
 # Multi Cursor Enhancer
 
+[![](https://img.shields.io/twitter/follow/hediet_dev.svg?style=social)](https://twitter.com/intent/follow?screen_name=hediet_dev)
+
 This extension provides helper commands for working with multiple cursors.
 
 ## Provided Commands
