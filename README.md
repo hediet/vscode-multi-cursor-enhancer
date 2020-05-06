@@ -8,7 +8,6 @@ This extension provides helper commands for working with multiple cursors.
 
 -   **Multi Cursor Enhancer: Multi Rename** (bound to F2). Renames every selected symbol to a matching item. Matching items are extracted from the clipboard and can be edited in a prompt.
 
-
     This is incredible useful if combined with other multi cursor features.
 
     ![](./docs/demo-multi-rename.gif)
