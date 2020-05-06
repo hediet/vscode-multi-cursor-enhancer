@@ -3,7 +3,7 @@
 	"private": true,
 	"displayName": "Multi Cursor Enhancer",
 	"description": "This extension provides helper commands for working with multiple cursors.",
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"license": "GPL-3.0",
 	"publisher": "hediet",
 	"author": {
@@ -18,7 +18,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:hediet.multi-cursor-enhancer.multi-rename"
+		"onCommand:multi-cursor-enhancer.multi-rename"
 	],
 	"repository": {
 		"url": "https://github.com/hediet/vscode-multi-cursor-enhancer.git"
@@ -26,13 +26,13 @@
 	"main": "./out/extension",
 	"contributes": {
 		"commands": {
-			"command": "hediet.multi-cursor-enhancer.multi-rename",
+			"command": "multi-cursor-enhancer.multi-rename",
 			"title": "Multi Cursor Enhancer: Multi Rename"
 		},
 		"keybindings": [
 			{
 				"key": "f2",
-				"command": "hediet.multi-cursor-enhancer.multi-rename",
+				"command": "multi-cursor-enhancer.multi-rename",
 				"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
 			}
 		]

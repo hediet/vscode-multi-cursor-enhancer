@@ -27,7 +27,7 @@ export class Extension {
 
 		this.dispose.track(
 			commands.registerCommand(
-				"hediet.multi-cursor-enhancer.multi-rename",
+				"multi-cursor-enhancer.multi-rename",
 				() => {
 					new MultiRename().invoke();
 				}
