@@ -18,22 +18,33 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:multi-cursor-enhancer.multi-rename"
+		"*"
 	],
 	"repository": {
 		"url": "https://github.com/hediet/vscode-multi-cursor-enhancer.git"
 	},
 	"main": "./out/extension",
 	"contributes": {
-		"commands": {
-			"command": "multi-cursor-enhancer.multi-rename",
-			"title": "Multi Cursor Enhancer: Multi Rename"
-		},
+		"commands": [
+			{
+				"command": "multi-cursor-enhancer.multi-rename",
+				"title": "Multi Cursor Enhancer: Multi Rename"
+			},
+			{
+				"command": "multi-cursor-enhancer.multi-rename.cancel",
+				"title": "Multi Cursor Enhancer: Cancel Multi Rename"
+			}
+		],
 		"keybindings": [
 			{
 				"key": "f2",
 				"command": "multi-cursor-enhancer.multi-rename",
 				"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+			},
+			{
+				"key": "escape",
+				"command": "multi-cursor-enhancer.multi-rename.cancel",
+				"when": "multiRename.isActive"
 			}
 		]
 	},
@@ -51,6 +62,8 @@
 	},
 	"dependencies": {
 		"@hediet/node-reload": "0.7.3",
-		"@hediet/std": "0.6.0"
+		"@hediet/std": "0.6.0",
+		"@types/diff": "^4.0.2",
+		"diff": "^4.0.2"
 	}
 }

@@ -1,4 +1,4 @@
-import { window, ExtensionContext, commands } from "vscode";
+import { window, ExtensionContext } from "vscode";
 import { Disposable } from "@hediet/std/disposable";
 import {
 	enableHotReload,
@@ -12,6 +12,7 @@ if (process.env.HOT_RELOAD) {
 }
 
 import { MultiRename } from "./multiRename";
+import { ChangeTracker } from "./ChangeTracker";
 
 registerUpdateReconciler(module);
 
@@ -21,18 +22,12 @@ export class Extension {
 	constructor() {
 		if (getReloadCount(module) > 0) {
 			const i = this.dispose.track(window.createStatusBarItem());
-			i.text = "reload" + getReloadCount(module);
+			i.text = "reload-" + getReloadCount(module);
 			i.show();
 		}
 
-		this.dispose.track(
-			commands.registerCommand(
-				"multi-cursor-enhancer.multi-rename",
-				() => {
-					new MultiRename().invoke();
-				}
-			)
-		);
+		this.dispose.track(new ChangeTracker());
+		//this.dispose.track(new MultiRename());
 	}
 }
 
