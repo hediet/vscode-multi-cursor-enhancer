@@ -1,4 +1,6 @@
-# Multi Cursor Enhancer
+# Note: Use My Extension [Hediet Power Tools](https://github.com/hediet/vscode-hediet-power-tools) Instead!
+
+# Multi Cursor Enhancer (unpublished)
 
 [![](https://img.shields.io/twitter/follow/hediet_dev.svg?style=social)](https://twitter.com/intent/follow?screen_name=hediet_dev)
 
